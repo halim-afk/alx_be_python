@@ -1,7 +1,9 @@
-size_pattern = int(input("Enter the size of the pattern:"))
-for i in range(1, size_pattern + 1):
-  # Outer loop controls the number of rows
-  for j in range(1, size_pattern + 1):
-    # Inner loop prints asterisks for each row
-    print("*", end="")
-  print()
+
+size_pattern = int(input("Enter the size of the pattern: "))
+
+row = 0
+while row < size_pattern:
+    for col in range(size_pattern):
+        print("*", end="")
+    print()  
+    row += 1  
