@@ -1,23 +1,26 @@
-task = input("Enter your task:")
-priority = input("Priority (high/medium/low):")
-time_bound = input("Is it time-bound? (yes/no):")
- 
-Reminder = "Reminder: '{task}' is a high priority task that requires immediate attention today!"
-match priority : 
+# daily_reminder.py
+
+# استلام إدخالات المستخدم
+task = input("Enter your task: ")
+priority = input("Priority (high/medium/low): ").lower()
+time_bound = input("Is it time-bound? (yes/no): ").lower()
+
+# توليد التذكير بناءً على الأولوية والحساسية الزمنية
+match priority:
     case "high":
-       if time_bound == "yes":
-         print(Reminder)
-       else : 
-         print(f"'{task}' is a medium priority task")
+        if time_bound == "yes":
+            print(f"Reminder: '{task}' is a high priority task that requires immediate attention today!")
+        else:
+            print(f"Note: '{task}' is a high priority task. Try to complete it as soon as possible.")
     case "medium":
-       if time_bound == "yes":
-         print(Reminder)
-       else :
-         print(f"{task}' is a medium priority task")
+        if time_bound == "yes":
+            print(f"Reminder: '{task}' is a medium priority task that should be done today.")
+        else:
+            print(f"Note: '{task}' is a medium priority task. Schedule it when possible.")
     case "low":
-       if time_bound == "yes":
-         print(f"'{task}' is a medium priority task that requires immediate attention today!")
-       else :
-         print(f"Note: {task}' is a low priority task. Consider completing it when you have free time.")     
+        if time_bound == "yes":
+            print(f"Reminder: '{task}' is a low priority task but it is time-bound. Don't forget to finish it today.")
+        else:
+            print(f"Note: '{task}' is a low priority task. Consider completing it when you have free time.")
     case _:
-       print("thats unspacted")
+        print("Invalid priority entered. Please enter high, medium, or low.")
