@@ -1,38 +1,44 @@
+def display_menu():
+    print("\nShopping List Manager")
+    print("1. Add Item")
+    print("2. Remove Item")
+    print("3. View List")
+    print("4. Exit")
 
-shopping_list = []
+def main():
+    shopping_list = []
 
-def display_items():
-    for item in shopping_list:
-        print(item)
+    while True:
+        display_menu()
+        choice = input("Enter your choice: ")
 
-def add_to_list(product):
-    shopping_list.append(product)
-    display_items()
+        if choice == '1':
+            item = input("Enter the item to add: ").strip()
+            shopping_list.append(item)
+            print(f"{item} added to the shopping list.")
 
-status = input("Do you want to add, remove, or display? ")
+        elif choice == '2':
+            item = input("Enter the item to remove: ").strip()
+            if item in shopping_list:
+                shopping_list.remove(item)
+                print(f"{item} removed from the shopping list.")
+            else:
+                print(f"{item} not found in the shopping list.")
 
-if status == "add":
-    product = input("Enter the name of the product: ")
-    add_to_list(product)
+        elif choice == '3':
+            if shopping_list:
+                print("Current Shopping List:")
+                for i, item in enumerate(shopping_list, start=1):
+                    print(f"{i}. {item}")
+            else:
+                print("The shopping list is empty.")
 
-elif status == "remove":
-    product = input("Enter the name of the product to remove: ")
-    if product in shopping_list:
-        shopping_list.remove(product)
-    else:
-        print("Product not found.")
-    display_items()
+        elif choice == '4':
+            print("Goodbye!")
+            break
 
-elif status == "display":
-    display_items()
+        else:
+             print("Invalid choice. Please try again.")
 
-else:
-    print("Unknown request")
-
-
-
-
-
-
-
-
+if name == "main":
+    main()
