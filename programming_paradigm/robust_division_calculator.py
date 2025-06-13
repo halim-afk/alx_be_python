@@ -15,3 +15,5 @@ def safe_divide(numerator, denominator):
         return "Division failed."
 
 
+    except:
+           return "the operation is finish"
