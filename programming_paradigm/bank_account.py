@@ -7,7 +7,7 @@ class BankAccount:
     
     def display_balance(self):
         # طباعة الرصيد الحالي بصيغة واضحة
-        print(f"Current Balance: ${self.account_balance}")
+        print(f"Current Balance: ${float(self.account_balance)}")
 
 
     def deposit(self, amount):
