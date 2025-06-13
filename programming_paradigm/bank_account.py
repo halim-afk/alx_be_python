@@ -1,17 +1,23 @@
+# bank_account.py
+
 class BankAccount:
-    def __init__(self, initial_balance = 0):
+    def __init__(self, initial_balance=0):
+        # تعريف الرصيد الابتدائي للحساب البنكي
         self.account_balance = initial_balance
 
-    def deposit(self ,amount):
+    def deposit(self, amount):
+        # إيداع مبلغ في الحساب
         self.account_balance += amount
 
-    def withdraw(self ,amount):
-        if self.account_balance >= amount:
-          self.account_balance -= amount
-          return True
+    def withdraw(self, amount):
+        # سحب مبلغ من الحساب إذا كان الرصيد كافياً
+        if amount <= self.account_balance:
+            self.account_balance -= amount
+            return True
         else:
+            # إذا لم يكن هناك رصيد كافٍ، لا يتم السحب
             return False
-       
-       
+
     def display_balance(self):
+        # طباعة الرصيد الحالي بصيغة واضحة
         print(f"Current Balance: ${self.account_balance}")
