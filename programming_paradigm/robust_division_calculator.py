@@ -1,7 +1,7 @@
 def safe_divide(numerator, denominator):
     try:
         # محاولة تنفيذ القسمة
-        result = numerator / denominator
+        result = float(numerator) / float(denominator) 
         print(f"The result of the division is {result:.1f}")
         return "Successful division."
     except ZeroDivisionError:
