@@ -11,7 +11,7 @@ class BankAccount:
 
     def withdraw(self, amount):
         # سحب مبلغ من الحساب إذا كان الرصيد كافياً
-        if amount <= self.account_balance:
+        if self.account_balance >= amount:
             self.account_balance -= amount
             return True
         else:
