@@ -7,11 +7,11 @@ def safe_divide(numerator, denominator):
     except ZeroDivisionError:
         # معالجة خطأ القسمة على صفر
         print("Error: Cannot divide by zero.")
+        return "Division failed."
+
     except ValueError:
         # معالجة خطأ إدخال غير رقمي
         print("Error: Please enter numeric values only.")
-    except:
-        # معالجة أي أخطاء غير متوقعة
         return "Division failed."
 
 
