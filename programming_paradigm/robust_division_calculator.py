@@ -17,5 +17,4 @@ def safe_divide(numerator, denominator):
         print(f"An unexpected error occurred: {e}")
         return "Division failed."
 
-# اختبار الدالة
-print(safe_divide(6, 1))
+
