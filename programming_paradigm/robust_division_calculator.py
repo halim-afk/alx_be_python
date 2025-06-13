@@ -2,7 +2,7 @@ def safe_divide(numerator, denominator):
     try:
         # محاولة تنفيذ القسمة
         result = float(numerator) / float(denominator) 
-        print(f"The result of the division is {result:.1f}")
+        print(f"The result of the division is {result}")
         return "Successful division."
     except ZeroDivisionError:
         # معالجة خطأ القسمة على صفر
