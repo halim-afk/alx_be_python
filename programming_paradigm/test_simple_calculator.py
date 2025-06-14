@@ -1,6 +1,7 @@
 import unittest
 from simple_calculator import SimpleCalculator
 
+
 class TestSimpleCalculator(unittest.TestCase):
 
     def setUp(self):
@@ -34,6 +35,5 @@ class TestSimpleCalculator(unittest.TestCase):
     def test_divide_by_zero(self):
         self.assertIsNone(self.calc.divide(5, 0))
 
-if __name__ == '__main__':
-    unittest.main()
+
 
