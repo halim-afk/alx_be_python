@@ -1,4 +1,4 @@
-class Book():
+class Book:
     def __init__(self ,title ,author):
         self.title = title
         self.author = author
@@ -14,7 +14,7 @@ class Book():
                 print(f" no title no author")
 
 
-class Library():
+class Library:
     _books =[]
     def add_book(self,book):
         book = __books.append(book)
