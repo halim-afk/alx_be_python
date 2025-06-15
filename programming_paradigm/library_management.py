@@ -15,6 +15,8 @@ class Book:
 
 
 class Library:
+    def __init__(self) -> None:
+        pass
     _books =[]
     def add_book(self,book):
         book = __books.append(book)
