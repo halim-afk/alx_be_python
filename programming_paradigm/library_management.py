@@ -3,16 +3,8 @@ class Book:
         self.title = title
         self.author = author
     def _is_checked_out():
-        if title !="" and  author != "":
-            print(f"title is: {title} and the author is :{author}")        
-        else:
-            if title !="" and author =="":
-              print(f"title is: {title}")
-            elif title =="" and author !="":
-                print(f"author is: {author}")
-            else :
-                print(f" no title no author")
-
+        if title !="" a     
+           return True
 
 class Library:
     def __init__(self):
