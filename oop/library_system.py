@@ -100,6 +100,6 @@ class Library:
             print("The library is currently empty.")
             return
 
-        print("Listing all books in the library:")
+        # Removed the line "print("Listing all books in the library:")"
         for book in self.books:
             print(book) # This will call the __str__ method of each book object
